@@ -1,0 +1,79 @@
+#main {
+    padding: 10px;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    background-color: dimgray;
+    border: 10px solid black;
+}
+#row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.btn {
+    border: 2px solid black;
+    font-size: 24px;
+    margin: 2px;
+    padding: 10px;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    cursor: default;
+}
+
+.calcDisplay {
+    width: 100%;
+    border: 2px solid black;
+    height: 56px;
+    font-size: 24px;
+    background-color: white;
+}
+
+.btn:hover {
+    box-shadow: 2px 2px 2px darkolivegreen;
+}
+
+.large-btn {
+    flex-grow: 2;
+}
+
+.equal {
+    background-color: orangered;
+}
+
+.numbers {
+    background-color: grey;
+}
+
+.operators {
+    background-color: orange;
+}
+
+.suboperators {
+    background-color: lightslategrey;
+}
+
+#result {
+    width: 100%;
+    display: flexbox;
+}
+
+#calcInput {
+    align-self: flex-end;
+    text-align: end;
+}
+
+#result {
+    text-align: start;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px;
+}
+
+
+
+

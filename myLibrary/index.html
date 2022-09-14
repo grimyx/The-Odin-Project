@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <title>My Library</title>
+    <link href="./css/stylesheet.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="title">
+        <h1>My Library</h1>
+        <h2>Simple library app, part of The Odins Project course exercises.</h2>
+        <h3>Uses localStorage to save app state.</h3>
+    </div>
+
+    <div id="main">
+        <div id="newBook">
+            <label for="bookTitle">Title</label>
+            <input id="bookTitle" class="bookInput" name="bookTitle" required />
+
+            <label for="bookAuthor">Author</label>
+            <input id="bookAuthor" class="bookInput" name="bookAuthor" required />
+
+            <label for="bookPages">Pages</label>
+            <input id="bookPages" class="bookInput" name="bookPages" required />
+
+            <label for="readBook">Read</label>
+            <input type="checkbox" id="readBook" name="readBook" />
+            <button id="addBtn">+</button>
+        </div>
+        <div id="bookList">
+
+        </div>
+        <script src="./js/index.js"></script>
+    </div>
+</body>

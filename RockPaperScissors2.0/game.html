@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Rock,Paper,Scissors</title>
+
+    <style>
+        div {
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        #winner {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Rock,Paper,Scissors</h1>
+
+    <div id="main">
+        <h2 id="score">0:0</h2>
+        <div id="winner">
+            <h2 id="so"></h2>
+        </div>
+        <div>
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+
+        <div id="result-container">
+            <h2 id="result">Result</h2>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+
+        let game = newGame();
+        
+
+        const rockBtn = document.getElementById('rock');
+        const paperBtn = document.getElementById('paper');
+        const scissorsBtn = document.getElementById('scissors');
+        const result = document.getElementById('result');
+        const gameMain = document.getElementById('main');
+        const winMsg = document.getElementById('winner');
+        
+        const displayWinMsg = (text) => {
+            winMsg.style = 'display: block;';
+            winMsg.querySelector('h2').textContent = text;  
+            game = newGame();
+        }
+
+        const updateUI = (game) => {
+            result.textContent = game.msg;
+            score.textContent = `${game.playerWins} : ${game.computerWins}`;
+
+            if(game.playerWins == 5) {
+                displayWinMsg('You won !!!');
+            }
+
+            if(game.computerWins == 5) {
+                displayWinMsg('Computer won !!!');
+            }
+        }
+
+        const play = (item) => {
+            game = playSingleRound(item, computerPlay(), game);
+            updateUI(game);
+        }
+
+
+
+        rockBtn.addEventListener('click', () => play("rock"));
+
+        paperBtn.addEventListener('click', () => play("paper"));
+
+        scissorsBtn.addEventListener('click', () => play("scissors"));
+    
+    </script>
+
+</body>

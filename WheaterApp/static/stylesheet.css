@@ -1,0 +1,10 @@
+.wImg {
+    width: 9rem;
+    height: auto;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url('https://www.ecoplusitalia.com/wp-content/uploads/2016/04/nature-background.jpg');
+    background-size: cover;
+}
